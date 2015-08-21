@@ -1,0 +1,1 @@
+java -Dfile.encoding=UTF-8 -cp "jar/selendroid-grid-plugin-0.16.0.jar:jar/selenium-server-standalone-2.45.0.jar" org.openqa.grid.selenium.GridLauncher -capabilityMatcher io.selendroid.grid.SelendroidCapabilityMatcher -role hub -host 127.0.0.1 -port 4444

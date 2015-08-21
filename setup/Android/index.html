@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+
+<h2 id="android-dev-env">Set up the Android development environment</h2>
+<div class="sectionbody">
+    <div class="paragraph">
+        <p>Before you can build Android applications, you must install the Android SDK. Installing the Android SDK also installs the AVD Manager, a graphical user interface for creating and managing Android Virtual Devices (AVDs).</p>
+    </div>
+    <div class="olist arabic">
+        <ol class="arabic">
+            <li> <p>From the <a href="http://developer.android.com/sdk/index.html">Android web site</a>, download the correct version of the Android SDK for your operating system.</p> </li>
+            <li> <p>Unzip the archive to a location of your choosing. For example, on Linux or Mac, you can place it in the root of your user directory. See the <a href="http://developer.android.com/sdk/installing/index.html">Android Developers</a> web site for additional installation details.</p> </li>
+            <li> <p>Configure the <code>ANDROID_HOME</code> environment variable based on the location of the Android SDK. Additionally, consider adding <code>ANDROID_HOME/tools</code>, and <code>ANDROID_HOME/platform-tools</code> to your PATH.</p> </li>
+        </ol>
+    </div>
+    <div class="dlist">
+        <dl>
+            <dt class="hdlist1">
+                Mac OS X
+            </dt>
+        </dl>
+    </div>
+    <div class="listingblock">
+        <div class="content">
+            <button data-clipboard-text="export ANDROID_HOME=/<installation location>/android-sdk-macosx
+export PATH=${PATH}:$ANDROID_HOME/tools:$ANDROID_HOME/platform-tools" class="copy-button snippet"></button><pre>export ANDROID_HOME=/&lt;installation location&gt;/android-sdk-macosx
+export PATH=${PATH}:$ANDROID_HOME/tools:$ANDROID_HOME/platform-tools</pre>
+        </div>
+    </div>
+    <div class="dlist">
+        <dl>
+            <dt class="hdlist1">
+                Linux
+            </dt>
+        </dl>
+    </div>
+    <div class="listingblock">
+        <div class="content">
+            <button data-clipboard-text="export ANDROID_HOME=/<installation location>/android-sdk-linux
+export PATH=${PATH}:$ANDROID_HOME/tools:$ANDROID_HOME/platform-tools" class="copy-button snippet"></button><pre>export ANDROID_HOME=/&lt;installation location&gt;/android-sdk-linux
+export PATH=${PATH}:$ANDROID_HOME/tools:$ANDROID_HOME/platform-tools</pre>
+        </div>
+    </div>
+    <div class="dlist">
+        <dl>
+            <dt class="hdlist1">
+                Windows
+            </dt>
+        </dl>
+    </div>
+    <div class="listingblock">
+        <div class="content">
+            <button data-clipboard-text="set ANDROID_HOME=C:\<installation location>\android-sdk-windows
+set PATH=%PATH%;%ANDROID_HOME%\tools;%ANDROID_HOME%\platform-tools" class="copy-button snippet"></button><pre>set ANDROID_HOME=C:\&lt;installation location&gt;\android-sdk-windows
+set PATH=%PATH%;%ANDROID_HOME%\tools;%ANDROID_HOME%\platform-tools</pre>
+        </div>
+    </div>
+    <div class="paragraph">
+        <p>The Android SDK download does not include specific Android platforms. To run the code in this guide, you need to download and install the latest SDK platform. You do this by using the Android SDK and AVD Manager that you installed in the previous section.</p>
+    </div>
+    <div class="paragraph">
+        <p><strong>1.</strong> Open the <strong>Android SDK Manager</strong> window:</p>
+    </div>
+    <div class="listingblock">
+        <div class="content">
+            <button data-clipboard-text="android" class="copy-button snippet"></button><pre>android</pre>
+        </div>
+    </div>
+    <div class="admonitionblock note">
+        <table>
+            <tbody>
+            <tr>
+                <td class="icon"> <i class="fa icon-note" title="Note"></i> </td>
+                <td class="content"> If this command does not open the <strong>Android SDK Manager</strong>, then your path is not configured correctly. </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="paragraph">
+        <p><strong>2.</strong> Select the <strong>Tools</strong> checkbox.</p>
+    </div>
+    <div class="paragraph">
+        <p><strong>3.</strong> Select the checkbox for the <strong>latest Android SDK</strong>.</p>
+    </div>
+    <div class="paragraph">
+        <p><strong>4.</strong> From the <strong>Extras</strong> folder, select the checkbox for the <strong>Android Support Library</strong>.</p>
+    </div>
+    <div class="paragraph">
+        <p><strong>5.</strong> Click the <strong>Install packages…​</strong> button to complete the download and installation.</p>
+    </div>
+    <div class="admonitionblock note">
+        <table>
+            <tbody>
+            <tr>
+                <td class="icon"> <i class="fa icon-note" title="Note"></i> </td>
+                <td class="content"> You may want to install all the available updates, but be aware it will take longer, as each API level is a large download. </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<div>
+    <h2>Selendroid</h2>
+    <p>You don't need to download the Selendroid application. Every file needed is already in this repo. You can update to a newer version, but then you will also need to update the scripts.</p>
+    <p>To launch Selendroid and the Selenium Grid, first run the startSelendroid.sh/bash file. Next run "runSelndroidGridPlugin.sh/bat". This will start a proxy and the selenium grid.</p>
+    <p>If you run openSelendroidAdmin.sh you will see an overview with all the devices connected to your selendroid. Running openSeleniumAdmin.sh takes you to the overviewpage of the selenium grid.
+        Here you'll see all the devices and browsers that are connected to the grid.</p>
+</div>
+<div>
+    <h2>Connect your android phone</h2>
+    <p>An android phone can be used for testing if he is connected via usb or wifi.</p>
+    <h3>Via Usb</h3>
+    <p>Before the phone can be used, you need to activate the developer settings. Push the settings icon and go to the developer settings. In this menu, activate debug via usb.</p>
+    <p>Next connect the device via the usb cable to your computer. In the console/terminal, type "adb devices". Your device should be listed.</p>
+    <h3>via wifi</h3>
+    <ol>
+        <li>Get the ip adres for your device via Settings->About->Status</li>
+    <li>open a port with "adb tcpip 5555".
+        This should give the output:
+        "restarting in TCP mode port: 5555"</li>
+    <li>Connect your device to that port with "adb connect &lt;device IP adress&gt;"</li>
+        <li>you should now get the output:
+            "connected to &lt;device IP adress&gt;"</li>
+        <li>"adb devices" Should give the output:<br />
+            List of devices attached:<br />
+            &lt;device IP adress&gt; device</li>
+    </ol>
+</div>
+
+</body>
+</html>

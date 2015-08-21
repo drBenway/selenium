@@ -1,0 +1,1 @@
+curl -H "Content-Type: application/json" -X POST --data @nodeConfigSelendroid.json http://localhost:4444/grid/register

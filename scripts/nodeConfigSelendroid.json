@@ -1,0 +1,22 @@
+{
+  "capabilities": [{
+    "browserName": "selendroid",
+    "maxInstances": 3,
+    "platform": "MAC",
+    "emulator": false,
+    "aut": "io.selendroid.testapp:0.16.0"
+  }, {
+    "browserName": "android",
+    "platform": "MAC",
+    "emulator": false,
+    "maxInstances": 3
+  }],
+  "configuration": {
+    "maxSession": 1,
+    "register": true,
+    "hubHost": "localhost",
+    "hubPort": 4444,
+    "timeout": 10000,
+    "remoteHost": "http://localhost:5555",
+    "proxy": "io.selendroid.grid.SelendroidSessionProxy"
+  } }
