@@ -1,0 +1,6 @@
+https://bitbucket.org/appium/appium.app/downloads/appium.dmghttps://bitbucket.org/appium/appium.app/downloads/appium.dmg
+
+starting appium with a real device
+appium -U ea024661de7f4ca20ee066e411bd1de8149510f9
+the parameter for U is the device ID.
+You can find the device ID in Xcode under Window>devices

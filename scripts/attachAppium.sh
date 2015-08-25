@@ -1,0 +1,1 @@
+appium --nodeconfig /Users/Home/Desktop/selenium/scripts/nodeconfig/appiumconfig.json

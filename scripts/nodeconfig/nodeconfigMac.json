@@ -22,8 +22,7 @@
 
     {
       "platform": "MAC",
-      "browserName": "safari",
-      "maxInstances": 1,
+      "browserName": "safari",      "maxInstances": 1,
       "seleniumProtocol": "WebDriver"
     }
   ],
