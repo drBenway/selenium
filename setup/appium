@@ -4,3 +4,12 @@ starting appium with a real device
 appium -U ea024661de7f4ca20ee066e411bd1de8149510f9
 the parameter for U is the device ID.
 You can find the device ID in Xcode under Window>devices
+Appium is not working with real ios devices. the safarilauncher is nolonger bundeled with the application
+You can install it by checking out the git repo and
+then bash reset.sh --real-safari. This however didn't build on my macbook
+
+
+
+safari not working due to bug
+https://github.com/SeleniumHQ/selenium/commit/26bf0bc54be8cccab99f4fb2b170bb9aa8ad8030
+Workaround is to use the selenium 2.44.0 server. Then navigating with safari works

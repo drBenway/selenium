@@ -7,7 +7,12 @@
       "maxInstances": 1,
       "seleniumProtocol": "WebDriver"
     },
-
+    {
+      "platform": "MAC",
+      "browserName": "firefox",
+      "maxInstances": 1,
+      "seleniumProtocol": "WebDriver"
+    },
     {
       "acceptSslCerts": true,
       "javascriptEnabled": true,
@@ -18,12 +23,6 @@
       "platform": "MAC",
       "maxInstances": 1,
       "cleanSession": true
-    },
-
-    {
-      "platform": "MAC",
-      "browserName": "safari",      "maxInstances": 1,
-      "seleniumProtocol": "WebDriver"
     }
   ],
   "configuration":
