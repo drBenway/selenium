@@ -1,0 +1,1 @@
+java -jar jar/selenium-server-standalone-2.45.0.jar -port 5556 -role node -hub http://localhost:4444/grid/register -nodeConfig C:\Users\westworld\Desktop\selenium\selenium\scripts\nodeconfig\nodeconfigWindowsIE.json -Dwebdriver.ie.driver=drivers/IEDriverServer2.47.exe
