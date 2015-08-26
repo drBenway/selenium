@@ -16,12 +16,6 @@
             "platform": "WINDOWS",
             "maxInstances": 5,
             "cleanSession": true
-        },
-        {
-            "platform": "WINDOWS",
-            "browserName": "internet explorer",
-            "maxInstances": 1,
-            "seleniumProtocol": "WebDriver"
         }
     ],
     "configuration": {
