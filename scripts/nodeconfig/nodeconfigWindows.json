@@ -3,6 +3,11 @@
         {
             "platform": "WINDOWS",
             "browserName": "chrome",
+		"chromeOptions":{
+		"binary": "C:/Program Files/Chrome",
+		"args": [],
+		"extensions": []
+		},
 	"version": 42,
             "maxInstances": 3,
             "seleniumProtocol": "WebDriver"
