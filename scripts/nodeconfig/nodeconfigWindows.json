@@ -3,11 +3,13 @@
         {
             "platform": "WINDOWS",
             "browserName": "chrome",
+	"version": 42,
             "maxInstances": 3,
             "seleniumProtocol": "WebDriver"
         },
         {
 		"browserName" : "firefox",
+		"version": 40,
             "acceptSslCerts": true,
             "javascriptEnabled": true,
             "takesScreenshot": false,
