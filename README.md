@@ -30,6 +30,7 @@ expl: seleniumAdress : 'http://yourIP/wd/hub'
 
 In the multiCapabilities define the browsers you want to test.
 expl:
+<pre><code>
 multiCapabilities: [
   { 
   browserName: chrome,
@@ -42,4 +43,4 @@ multiCapabilities: [
   maxInstances: 2
   }]
 }
-
+</pre></code>
