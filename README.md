@@ -1,6 +1,6 @@
 Selenium Grid
 ============
-This repo contains all the code to set up a selenium grid. The version that is used is 2.45.0. We also use 2.44 as a fallback for Safari. Safari doesn't seem to work with version 2.45.0.
+This repo contains all the code to set up a selenium grid. The version that is used is 2.47.1. We also use 2.44 as a fallback for Safari. Safari doesn't seem to work with version 2.47.1.
 
 What is Selenium Grid
 ---------------------
