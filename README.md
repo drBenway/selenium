@@ -22,6 +22,11 @@ Attach nodes to Selenium
 To attach nodes to the grid you should launch the startNodes.sh/startNodes.bat files. Be sure to update the ip adress/localhost settings in the file.  A dedicated script is forseen for InternetExplorer and Safari. Since you need to provide a driver for these browsers, the script is different. All the drivers are in the scripts/drivers folder.
 It is advised to also update the files in the nodeconfig folder. In the json files you should update the version with the current browser version that you have installed on that machine.
 
+Detaching nodes from Selenium
+-----------------------------
+You can detach a node with an http request to the node:
+expl: http://node_ip_address:port/selenium-server/driver/?cmd=shutDownSeleniumServer
+
 Protractor
 ----------
 If you are using Protractor to run your tests, you can add the following lines to your configuration, to make use of the grid:
